@@ -16,9 +16,9 @@ class Task extends Model
 
     protected $guarded = [];
 
-    protected $casts = [
-        'status' => TaskStatus::class,
-    ];
+    // protected $casts = [
+    //     'status' => TaskStatus::class,
+    // ];
     protected $cast = [
         'priority' => TaskPriority::class,
     ];
