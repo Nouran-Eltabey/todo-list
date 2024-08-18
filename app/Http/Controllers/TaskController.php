@@ -27,7 +27,7 @@ class TaskController extends Controller
             $tasks = $tasks->where('label', '=', $label);
         }*/
 
-        $sortPriority = $request->query('sortPriority');
+        /* $sortPriority = $request->query('sortPriority');
         if (isset($sortPriority)) {
             if ($sortPriority == 'desc')
                 $tasks = $tasks->orderByRaw("FIELD(priority, \"high\", \"medium\", \"low\")");
@@ -39,9 +39,10 @@ class TaskController extends Controller
         if (isset($sortDeadline)) {
 
             $tasks = $tasks->orderBy('deadline', $sortDeadline);
-        }
+        }*/
 
-        $tasks = $tasks->get();
+        $tasks = Task::filter()->sort()->get();
+        // $tasks = $tasks->get();
 
         return response()->json($tasks);
     }

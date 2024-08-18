@@ -2,6 +2,8 @@
 
 namespace App\Models;
 
+use Abbasudo\Purity\Traits\Filterable;
+use Abbasudo\Purity\Traits\Sortable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use App\Enums\TaskStatus;
 use App\Enums\TaskPriority;
@@ -11,7 +13,7 @@ use App\StateMachines\StatusStateMachine;
 
 class Task extends Model
 {
-    use HasFactory, HasStateMachines;
+    use HasFactory, HasStateMachines, Filterable, Sortable;
 
 
     protected $guarded = [];
