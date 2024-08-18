@@ -5,8 +5,6 @@ namespace App\Http\Controllers;
 use App\Models\Task;
 use App\Http\Requests\TaskRequest;
 use Illuminate\Http\Request;
-use App\Enums\TaskStatus;
-use App\Enums\TaskPriority;
 use App\Http\Requests\UpdateTaskRequest;
 
 class TaskController extends Controller
