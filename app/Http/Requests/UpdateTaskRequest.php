@@ -27,7 +27,6 @@ class UpdateTaskRequest extends FormRequest
             'priority' => 'sometimes|required|in:low,medium,high', //Must be one of the predefined priorities
             'label' => 'nullable|string|max:100',
             'deadline' => 'nullable|after_or_equal:today', // Must be a valid date, not in the past
-            'status' => 'sometimes|required|in:todo,inprogress,done,closed', //Must be one of the predefined statuses
         ];
     }
 
@@ -38,7 +37,6 @@ class UpdateTaskRequest extends FormRequest
             'priority.required' => 'The priority is required.',
             'priority.in' => 'The priority must be one of:low, medium, high',
             'deadline.after_or_equal' => 'The deadline cannot be in the past.',
-            'status.required' => 'The status is required.',
             'status.in' => 'The status must be one of: pending, in progress, or completed.',
         ];
     }

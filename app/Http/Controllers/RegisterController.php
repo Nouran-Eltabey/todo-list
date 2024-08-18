@@ -11,9 +11,7 @@ class RegisterController extends Controller
 {
     public function store(RegisterRequest $request)
     {
-
         // Validation is automatically handled by RegisterRequest
-
         $registerUserData = $request->validated();
         $user = User::create([
             'username' => $registerUserData['username'],

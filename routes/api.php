@@ -15,7 +15,6 @@ Route::post('register', [RegisterController::class, 'store']);
 Route::post('login', [LoginController::class, 'store']);
 
 Route::middleware(['auth:sanctum'])->group(function () {
-
     Route::delete('logout', [LoginController::class, 'delete']);
 
     Route::get('tasks', [TaskController::class, 'index']);

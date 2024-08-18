@@ -6,8 +6,6 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\TaskStatusRequest;
 use App\Models\Task;
 use Asantibanez\LaravelEloquentStateMachines\Exceptions\TransitionNotAllowedException;
-use Illuminate\Http\Request;
-use Illuminate\Validation\ValidationException;
 
 class StatusController extends Controller
 {
